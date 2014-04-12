@@ -1,0 +1,54 @@
+<html>
+   
+   <head>
+
+      <link type="text/css" href="/css/jquery-ui.css" rel="Stylesheet" />
+
+      <script type="text/javascript" src="http://192.168.2.102:8000/socket.io/socket.io.js"></script>
+
+      <script type="text/javascript" src="/js/jquery.min.js"></script>
+
+      <script type="text/javascript" src="/js/jquery-ui.js"></script>
+
+      <script type="text/javascript" src="/flot/jquery.flot.js"></script>
+       
+      <script type="text/javascript" src="/faye.js"></script>
+      <script type ="text/javascript">
+
+         $(document).ready(function(){
+            var client = new Faye.Client("/faye");
+            client.subscribe( "/data/live", function(message) {
+               var i = 0;
+               for ( key in message ) {
+                 $('.' + key + '_value').first().html(message[key]);
+               };
+            });
+          });
+ 
+      </script>
+
+   </head>
+
+   <body>
+
+      <div role="main">
+	 Distance is: <span class="distance_value"></span> cm<Br/>
+         Temperature is: <span class="temp_value"></span> *C<Br/>
+         Humidity is : <span class="humid_value"></span> %<Br/>
+         <!-- Airquality is: <span class="quali_value"></span> <Br/> -->
+         Waterstatus is: <span class="water_value"></span> <Br/>
+         <!-- Lightstatus is: <span class="light_value"></span> <Br/> -->
+         Last flood was: <span class="lastFlood_value"></span> minutes ago<Br/>
+        <br/>
+
+      </div>
+
+
+   </body>
+
+
+
+
+
+</html>
+
