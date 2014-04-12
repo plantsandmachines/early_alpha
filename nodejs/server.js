@@ -1,6 +1,6 @@
 //__________________________________________
 //
-//       			 PLANTS & MACHINES
+//    PLANTS & MACHINES
 //          early alpha v-0.0.1
 //
 //            Martin Breuer
