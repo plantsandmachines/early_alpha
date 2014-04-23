@@ -10,6 +10,9 @@ An aquaponic system is esentially the combination of a regular hydroculture with
 
 Through the use of technology we are able to modify environmental conditions inside this artificial ecosystem to become the perfect spa for plants and aquatic animals. The goal is to have a sensing robot that by the help of machinelearning is able to optimize the cultivation of food in regard to energy consumption, yield and taste.
 
+
+![alt text](https://www.dropbox.com/s/zqmgs832h7l5rlx/alpha.jpg "early alpha")
+
 ---
 
 ##### tldr: [sensors] + [actors] -> [arduino] -usb-serial-JSON-> [raspberryPi] -node.js-> (mongodb) && (webinterface) 
@@ -27,18 +30,29 @@ Through the use of technology we are able to modify environmental conditions ins
 ###### node.js
 
 * install mongodb, node.js and npm on your machine
-* inside the node folder ~$ npm install
+* inside the node folder 
+
+```
+~$ npm install
+```
+
 * depending on your system:
-  * ~$ sudo node server.js
-  * ~$ sudo nodejs server.js
+
+```
+~$ sudo node server.js
+~$ sudo nodejs server.js
+```
 
 ###### avr / arduino
 
 * install gvr-gcc, avr-libc and avrdude
 * change lib dirs and avr chip in the makefile
 * inside the arduino folder:
-  * ~$ make
-  * ~$ sudo make upload
+
+```
+~$ make
+~$ sudo make upload
+```
   
 ###### webinterface
 
